@@ -1,0 +1,15 @@
+/*#inputSettings {
+	position: absolute;
+	top: -500px;
+	height: 350px;
+	width: 700px;
+	margin: auto;
+	z-index: 100;
+
+}*/
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}

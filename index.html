@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trivia</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Totally Trivial Trivia!</h1>
+            <p>Welcome to Trivia!! Select a category and difficulty to begin.
+                <br> You have 15 seconds to answer each question.
+                <br> Good Luck!!</p>
+        </div>
+        <div class="row" id="sectionSettings">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Choose a Category</h3>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6 text-center">
+                    <select id="selectCategory" class="custom-select form-control form-control-lg">
+                        <option value="any">All Categories</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="10">Entertainment: Books</option>
+                        <option value="11">Entertainment: Film</option>
+                        <option value="12">Entertainment: Music</option>
+                        <option value="13">Entertainment: Musicals & Theatres</option>
+                        <option value="14">Entertainment: Television</option>
+                        <option value="15">Entertainment: Video Games</option>
+                        <option value="16">Entertainment: Board Games</option>
+                        <option value="17">Science & Nature</option>
+                        <option value="18">Science: Computers</option>
+                        <option value="19">Science: Mathematics</option>
+                        <option value="20">Mythology</option>
+                        <option value="21">Sports</option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                        <option value="24">Politics</option>
+                        <option value="25">Art</option>
+                        <option value="26">Celebrities</option>
+                        <option value="27">Animals</option>
+                        <option value="28">Vehicles</option>
+                        <option value="29">Entertainment: Comics</option>
+                        <option value="30">Science: Gadgets</option>
+                        <option value="31">Entertainment: Japanese Anime & Manga</option>
+                        <option value="32">Entertainment: Cartoon & Animations</option>
+                    </select>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Choose a difficulty</h3>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6 text-center">
+                    <select id="selectDifficulty" class="custom-select form-control form-control-lg">
+                        <option value="any">All Difficulties</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button type="button" id="buttonGo" class="btn btn-primary btn-lg btn-block">Let's Go!</button>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div id="sectionQuestions" class="hidden">
+            <!-- class="hidden"> -->
+            <div class="row">
+                <div class="col-md-6 text-center col-sm-6">
+                    <h4>Question <span id="displayQuestionNumber"></span> of 15</h4>
+                </div>
+                <div class="col-md-6 text-center col-sm-6">
+                    <h4>Time Remaining: <span id=currentTimer>15</span> Seconds</h4>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                    <h1 id="displayQuestion" class="panel-title">Question</h1>
+                </div>
+                <div class="panel-body text-center">
+                    <h3 id="displayAnswer1">Answer 1</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <h3 id="displayAnswer2">Answer 2</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <h3 id="displayAnswer3">Answer 3</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <h3 id="displayAnswer4">Answer 4</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center col-sm-4">
+                    <h4>Correct: <span id="displayCorrect"></span></h4>
+                </div>
+                <div class="col-md-4 text-center col-sm-4">
+                    <h4>Incorrect: <span id="displayIncorrect"></span></h4>
+                </div>
+                <div class="col-md-4 text-center col-sm-4">
+                    <h4>Timed Out: <span id="displayTimeOut"></span></h4>
+                </div>
+            </div>
+        </div>
+        <div id="sectionResults" class="hidden">
+            <div class="jumbotron text-center">
+                <div class="container">
+                    <h1 id="feedback"></h1>
+                    <p id=feedbackDetail></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</html>
